@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(160deg, #fceff9, #e8d9ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* floating hearts */
+.heart {
+  position: absolute;
+  bottom: -20px;
+  font-size: 16px;
+  animation: floatUp 6s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) scale(0.8); opacity: 0.7; }
+  to { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+}
+
+.player {
+  width: 90%;
+  max-width: 420px;
+  background: rgba(255,255,255,0.65);
+  backdrop-filter: blur(18px);
+  border-radius: 30px;
+  padding: 28px;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  text-align: center;
+}
+
+h1 { margin: 0; font-size: 22px; color: #4a3f55; }
+.by { display: block; font-size: 12px; margin-bottom: 18px; color: #8a7fa1; }
+
+.lyrics {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.line {
+  position: absolute;
+  font-size: 18px;
+  color: #4a3f55;
+  opacity: 0;
+  filter: blur(6px);
+  transform: scale(0.95);
+  transition: all 0.6s ease;
+}
+
+.line.active {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ff9acb, #c9a7ff);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(255,154,203,0.4);
+}
