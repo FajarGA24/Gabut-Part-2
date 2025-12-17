@@ -17,7 +17,7 @@ body {
 .heart {
   position: absolute;
   bottom: -20px;
-  font-size: 12px;
+  font-size: 14px;
   animation: floatUp 6s linear infinite;
   opacity: 0.6;
 }
@@ -27,45 +27,46 @@ body {
   to { transform: translateY(-120vh) scale(1.2); opacity: 0; }
 }
 
-/* player box diperbesar */
+/* player box diperbesar maksimal untuk HP */
 .player {
   width: 95%;
-  max-width: 380px;  /* diperbesar supaya terlihat lebih jelas di HP */
-  background: rgba(255,255,255,0.7);
-  backdrop-filter: blur(18px);
-  border-radius: 25px;
-  padding: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  max-width: 430px;  /* lebih besar lagi */
+  min-width: 320px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  padding: 25px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.2);
   text-align: center;
 }
 
 h1 { 
   margin: 0; 
-  font-size: 20px; 
+  font-size: 22px; 
   color: #4a3f55; 
 }
 
 .by { 
   display: block; 
-  font-size: 12px; 
-  margin-bottom: 15px; 
+  font-size: 14px; 
+  margin-bottom: 18px; 
   color: #8a7fa1; 
 }
 
-/* lyrics box diperbesar */
+/* lyrics box lebih tinggi */
 .lyrics {
-  height: 140px;  /* lebih tinggi supaya lirik terlihat jelas */
+  height: 180px;  /* lebih tinggi untuk muat lirik */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   overflow: hidden;
 }
 
 .line {
   position: absolute;
-  font-size: 16px;  /* lebih besar, nyaman dibaca */
+  font-size: 18px;  /* lebih besar & jelas dibaca */
   color: #4a3f55;
   opacity: 0;
   filter: blur(5px);
@@ -79,23 +80,23 @@ h1 {
   transform: scale(1);
 }
 
-/* tombol diperbesar */
+/* tombol lebih besar */
 button {
   width: 100%;
-  padding: 12px;  /* lebih besar supaya mudah di-tap */
+  padding: 14px;  /* nyaman untuk tap di HP */
   background: linear-gradient(135deg, #ff9acb, #c9a7ff);
   border: none;
-  border-radius: 25px;
+  border-radius: 30px;
   color: white;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(255,154,203,0.4);
+  box-shadow: 0 12px 25px rgba(255,154,203,0.4);
 }
 
 /* responsive HP kecil */
 @media (max-width: 360px) {
-  h1 { font-size: 18px; }
-  .line { font-size: 14px; }
-  button { font-size: 14px; padding: 10px; }
-  .lyrics { height: 120px; }
+  h1 { font-size: 20px; }
+  .line { font-size: 16px; }
+  button { font-size: 15px; padding: 12px; }
+  .lyrics { height: 160px; }
 }
