@@ -17,7 +17,7 @@ body {
 .heart {
   position: absolute;
   bottom: -20px;
-  font-size: 16px;
+  font-size: 12px; /* lebih kecil untuk HP */
   animation: floatUp 6s linear infinite;
   opacity: 0.6;
 }
@@ -28,31 +28,42 @@ body {
 }
 
 .player {
-  width: 90%;
-  max-width: 420px;
+  width: 95%;
+  max-width: 360px; /* pas untuk HP */
   background: rgba(255,255,255,0.65);
   backdrop-filter: blur(18px);
-  border-radius: 30px;
-  padding: 28px;
-  box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+  border-radius: 25px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
   text-align: center;
 }
 
-h1 { margin: 0; font-size: 22px; color: #4a3f55; }
-.by { display: block; font-size: 12px; margin-bottom: 18px; color: #8a7fa1; }
+h1 { 
+  margin: 0; 
+  font-size: 20px; 
+  color: #4a3f55; 
+}
+
+.by { 
+  display: block; 
+  font-size: 11px; 
+  margin-bottom: 15px; 
+  color: #8a7fa1; 
+}
 
 .lyrics {
-  height: 140px;
+  height: 120px; /* lebih pas untuk layar kecil */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  overflow: hidden;
 }
 
 .line {
   position: absolute;
-  font-size: 18px;
+  font-size: 16px; /* teks lebih nyaman dibaca di HP */
   color: #4a3f55;
   opacity: 0;
   filter: blur(6px);
@@ -68,12 +79,19 @@ h1 { margin: 0; font-size: 22px; color: #4a3f55; }
 
 button {
   width: 100%;
-  padding: 12px;
+  padding: 10px; /* lebih nyaman di tap */
   background: linear-gradient(135deg, #ff9acb, #c9a7ff);
   border: none;
-  border-radius: 30px;
+  border-radius: 25px;
   color: white;
-  font-size: 15px;
+  font-size: 14px;
   cursor: pointer;
-  box-shadow: 0 10px 20px rgba(255,154,203,0.4);
+  box-shadow: 0 8px 15px rgba(255,154,203,0.4);
+}
+
+/* responsive kecil ekstra */
+@media (max-width: 360px) {
+  h1 { font-size: 18px; }
+  .line { font-size: 14px; }
+  button { font-size: 13px; padding: 8px; }
 }
