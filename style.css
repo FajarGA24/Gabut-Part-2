@@ -17,20 +17,21 @@ body {
 .heart {
   position: absolute;
   bottom: -20px;
-  font-size: 12px; /* lebih kecil untuk HP */
+  font-size: 12px;
   animation: floatUp 6s linear infinite;
   opacity: 0.6;
 }
 
 @keyframes floatUp {
   from { transform: translateY(0) scale(0.8); opacity: 0.7; }
-  to { transform: translateY(-120vh) scale(1.4); opacity: 0; }
+  to { transform: translateY(-120vh) scale(1.2); opacity: 0; }
 }
 
+/* player box diperbesar */
 .player {
   width: 95%;
-  max-width: 360px; /* pas untuk HP */
-  background: rgba(255,255,255,0.65);
+  max-width: 380px;  /* diperbesar supaya terlihat lebih jelas di HP */
+  background: rgba(255,255,255,0.7);
   backdrop-filter: blur(18px);
   border-radius: 25px;
   padding: 20px;
@@ -46,29 +47,30 @@ h1 {
 
 .by { 
   display: block; 
-  font-size: 11px; 
+  font-size: 12px; 
   margin-bottom: 15px; 
   color: #8a7fa1; 
 }
 
+/* lyrics box diperbesar */
 .lyrics {
-  height: 120px; /* lebih pas untuk layar kecil */
+  height: 140px;  /* lebih tinggi supaya lirik terlihat jelas */
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   overflow: hidden;
 }
 
 .line {
   position: absolute;
-  font-size: 16px; /* teks lebih nyaman dibaca di HP */
+  font-size: 16px;  /* lebih besar, nyaman dibaca */
   color: #4a3f55;
   opacity: 0;
-  filter: blur(6px);
+  filter: blur(5px);
   transform: scale(0.95);
-  transition: all 0.6s ease;
+  transition: all 0.5s ease;
 }
 
 .line.active {
@@ -77,21 +79,23 @@ h1 {
   transform: scale(1);
 }
 
+/* tombol diperbesar */
 button {
   width: 100%;
-  padding: 10px; /* lebih nyaman di tap */
+  padding: 12px;  /* lebih besar supaya mudah di-tap */
   background: linear-gradient(135deg, #ff9acb, #c9a7ff);
   border: none;
   border-radius: 25px;
   color: white;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
-  box-shadow: 0 8px 15px rgba(255,154,203,0.4);
+  box-shadow: 0 10px 20px rgba(255,154,203,0.4);
 }
 
-/* responsive kecil ekstra */
+/* responsive HP kecil */
 @media (max-width: 360px) {
   h1 { font-size: 18px; }
   .line { font-size: 14px; }
-  button { font-size: 13px; padding: 8px; }
+  button { font-size: 14px; padding: 10px; }
+  .lyrics { height: 120px; }
 }
